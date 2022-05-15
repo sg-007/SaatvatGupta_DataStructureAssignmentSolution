@@ -3,7 +3,7 @@ package com.gl.model;
 public class RightSkewed {
 
 	public class Node {
-		public int key;
+		int key;
 		public Node left, right;
 	}
 
