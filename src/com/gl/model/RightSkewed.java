@@ -16,7 +16,7 @@ public class RightSkewed {
 		return temp;
 		}
 	
-	public Node node, prevNode = null, headNode = null;
+	public Node node, prev = null, head = null;
 	
 		public void rightskew(Node root) {
 			if(root == null) {
@@ -24,24 +24,24 @@ public class RightSkewed {
 			}
 				rightskew(root.left);
 			
-			if (headNode == null) {
-				headNode = root;
+			if (head == null) {
+				head = root;
 				root.left = null;
-				prevNode = root;
+				prev = root;
 			}
 			else {
-				prevNode.right = root;
+				prev.right = root;
 				root.left = null;
-				prevNode = root;
+				prev = root;
 			}
 				rightskew(root.right);
 		}
 
-		public void traverseRightSkewed(Node root) {
+		public void traversal(Node root) {
 			if(root == null) {
 				return;
 			}
 			System.out.print(root.key + " ");
-			traverseRightSkewed(root.right);	
+			traversal(root.right);	
 			}
 		}

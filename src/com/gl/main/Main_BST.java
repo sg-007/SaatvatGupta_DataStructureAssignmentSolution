@@ -13,6 +13,6 @@ public class Main_BST {
         tree.node.right.left = tree.newNode(55);
         
 		tree.rightskew(tree.node);
-		tree.traverseRightSkewed(tree.headNode);
+		tree.traversal(tree.head);
 	}
 }
